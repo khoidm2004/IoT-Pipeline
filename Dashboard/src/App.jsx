@@ -31,7 +31,10 @@ const App = () => {
   const [meanHumidity, setMeanHumidity] = useState(null);
 
   useEffect(() => {
-    fetch("/api/db_api/api/v1/getData")
+    const apiUrl = `${import.meta.env.VITE_API_URL}${
+      import.meta.env.VITE_API_ENDPOINT
+    }`;
+    fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
