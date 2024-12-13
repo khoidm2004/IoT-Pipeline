@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api/*": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "http://68.219.251.214/api/$1"
+    }
+  ]
+}
