@@ -31,7 +31,7 @@ const App = () => {
   const [meanHumidity, setMeanHumidity] = useState(null);
 
   useEffect(() => {
-    fetch("/api/proxy")
+    fetch("/api/db_api/api/v1/getData/")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
