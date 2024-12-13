@@ -1,14 +1,13 @@
 {
   "functions": {
-    "api/*": {
-      "memory": 1024,
-      "maxDuration": 10
+    "api/db_api/api/v1/**/*.js": {
+      "maxDuration": 30
     }
   },
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "http://68.219.251.214/api/$1"
+      "source": "/api/db_api/api/v1/(.*)",
+      "destination": "http://68.219.251.214/api/db_api/api/v1/$1"
     }
   ]
 }
